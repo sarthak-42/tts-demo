@@ -42,8 +42,8 @@ export const TextToSpeech = () => {
       const client = new PollyClient({
         region: "ap-southeast-1",
         credentials: {
-          accessKeyId: import.meta.env.VITE_API_KEY,
-          secretAccessKey: import.meta.env.VITE_API_SECRET
+          accessKeyId: import.meta.env.VITE_AWS_ACCESS_KEY_ID,
+          secretAccessKey: import.meta.env.VITE_AWS_SECRET_ACCESS_KEY
         },
       });
 
