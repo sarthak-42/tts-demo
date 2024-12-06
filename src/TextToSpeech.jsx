@@ -24,6 +24,7 @@ export const TextToSpeech = () => {
  
   // 
   const handleTogglePlayback = async (message) => {
+    console.log("called")
     if (activeMessageId === message.id) {
       // Stop playback
       if (audioRef.current) {
@@ -55,6 +56,7 @@ export const TextToSpeech = () => {
         });
 
         const response = await client.send(command);
+        console.log("result", response)
 
         if (response.AudioStream) {
           const audioChunks = [];
